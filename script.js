@@ -49,3 +49,73 @@ function timer() {
 }
 
 setInterval(timer, 1000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const titles = document.querySelectorAll("h2:not(.reception)");
+  const receptionTitle = document.querySelector("h2.reception");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        console.log("Observing section:", entry.target); // Debugging log
+        if (entry.isIntersecting) {
+          console.log("Section visible, adding fade-in-up:", entry.target);
+          entry.target.classList.add("fade-in-up");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15, // Slightly adjusted threshold
+    }
+  );
+
+  const titleObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        console.log("Observing title:", entry.target);
+        if (entry.isIntersecting) {
+          console.log("Title visible, adding slide-in-left:", entry.target);
+          entry.target.classList.add("slide-in-left");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  if (receptionTitle) {
+    const receptionObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          console.log("Observing reception title:", entry.target);
+          if (entry.isIntersecting) {
+            console.log(
+              "Reception title visible, adding slide-in-right:",
+              entry.target
+            );
+            entry.target.classList.add("slide-in-right");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+    receptionObserver.observe(receptionTitle);
+  } else {
+    console.warn("No <h2 class='reception'> found in the document.");
+  }
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  titles.forEach((title) => {
+    titleObserver.observe(title);
+  });
+});
