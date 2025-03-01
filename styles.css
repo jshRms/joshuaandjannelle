@@ -5,6 +5,20 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.2;
+}
+section {
+  z-index: 10;
+  position: relative;
+}
 p {
   font-size: 16px;
   text-align: center;
@@ -31,6 +45,11 @@ h3 {
   text-align: center;
   margin-bottom: 20px;
 }
+h4 {
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+}
 td {
   text-align: center;
 }
@@ -40,7 +59,7 @@ img {
 input,
 textarea {
   width: 100%;
-  background: #e9e9e9;
+  background: #fff;
   border: none;
   padding: 10px;
 }
@@ -60,7 +79,6 @@ textarea {
 }
 .hero {
   width: 100%;
-  max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
 }
@@ -75,7 +93,6 @@ textarea {
 }
 .about-us {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: #000;
@@ -88,7 +105,7 @@ textarea {
 .attire,
 .rsvp {
   padding: 70px 20px;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .proposal,
 .date,
@@ -96,15 +113,25 @@ textarea {
 .attire,
 .rsvp {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 .proposal {
   padding: 70px 20px;
 }
+.proposal > div > p {
+  padding-bottom: 100px;
+}
+.proposal > div > div:nth-child(2) {
+  margin-bottom: 30px;
+}
+.proposal > div > div:nth-child(2) > img {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
 .date {
   margin-bottom: 40px;
+  margin-top: 450px;
+  padding-top: 50px;
 }
 .date > div > div > h3 {
   text-align: center;
@@ -132,6 +159,9 @@ textarea {
 iframe {
   width: 100%;
 }
+.attire {
+  padding: 70px 20px;
+}
 .attire > div > div.attire-container,
 .attire > div > div.color-container {
   width: 100%;
@@ -141,10 +171,21 @@ iframe {
   gap: 20px;
 }
 .attire > div > div.attire-container > div > img {
-  width: 130px;
+  width: 70px;
 }
 .attire > div > div.color-container > div > img {
   width: 80px;
+}
+.attire > div > div:nth-child(2),
+.attire > div > div:nth-child(4),
+.attire > div > div:nth-child(3),
+.attire > div > div:nth-child(5) {
+  margin-bottom: 40px;
+}
+.attire > div > div:nth-child(6) > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .countdown {
   width: 100%;
@@ -227,4 +268,60 @@ h2.reception {
 .slide-in-right {
   opacity: 1 !important;
   transform: translateX(0) !important;
+}
+.carousel {
+  position: unset;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.carousel > img {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel > img.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  section {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero,
+  .proposal,
+  .date,
+  .place-time,
+  .attire,
+  .rsvp,
+  .about-us > div {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .carousel > img {
+    height: auto;
+  }
+  .about-us,
+  .countdown {
+    max-width: 100%;
+  }
+  .date {
+    margin-top: 1150px;
+    margin-bottom: 70px;
+  }
+  .date > div > div {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .hero {
+    height: 80%;
+  }
 }
