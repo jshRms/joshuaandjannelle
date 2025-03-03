@@ -72,6 +72,18 @@ textarea {
   margin-top: 10px;
   cursor: pointer;
 }
+.e-invite {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.e-invite > a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #cab9a7;
+  padding: 10px 15px;
+}
 .form > .field {
   width: 100%;
   display: flex;
