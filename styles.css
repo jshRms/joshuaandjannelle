@@ -173,35 +173,16 @@ iframe {
   width: 100%;
 }
 .attire {
-  padding: 70px 20px;
+  padding: 70px 0px;
   background-color: #fff;
-}
-.attire > div > div.attire-container,
-.attire > div > div.color-container {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
 }
-.attire > div > div.attire-container > div > img {
-  width: 70px;
+.attire > div > div {
+  width: 100%;
 }
-.attire > div > div.color-container > div > img {
-  width: 80px;
-  border: 10px solid #fff;
-  border-radius: 100%;
-}
-.attire > div > div:nth-child(2),
-.attire > div > div:nth-child(4),
-.attire > div > div:nth-child(3),
-.attire > div > div:nth-child(5) {
-  margin-bottom: 40px;
-}
-.attire > div > div:nth-child(6) > div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.attire > div > div > img {
+  width: 100%;
+  height: auto;
 }
 .rsvp {
   background-color: #fff;
@@ -414,7 +395,8 @@ h2.reception {
 }
 @media screen and (min-width: 600px) {
   section,
-  .proposal > div {
+  .proposal > div,
+  .attire > div {
     max-width: 420px;
     margin: 0 auto;
   }
@@ -431,9 +413,13 @@ h2.reception {
   .date,
   .place-time,
   .rsvp > div,
-  .about-us > div {
+  .about-us > div,
+  .attire > div {
     max-width: 800px;
     margin: 0 auto;
+  }
+  .attire {
+    padding: 70px 0px 0px 0px;
   }
   .carousel > img {
     height: auto;
@@ -459,5 +445,6 @@ h2.reception {
   }
   .place-time {
     margin-bottom: 70px;
+    padding-top: 70px;
   }
 }
