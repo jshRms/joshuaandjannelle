@@ -426,7 +426,7 @@ h2.reception {
   transition: background-color 0.3s ease;
 }
 
-.accordion-header:hover {
+.accordion-item.active .accordion-header {
   background-color: #fff;
   color: #000;
 }
