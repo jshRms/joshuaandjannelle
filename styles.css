@@ -397,6 +397,7 @@ h2.reception {
   width: 100%;
   max-width: 600px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .accordion-item {
@@ -451,6 +452,9 @@ h2.reception {
   .attire,
   .rsvp {
     max-width: 100%;
+  }
+  .accordion {
+    padding: 0;
   }
 }
 @media screen and (min-width: 900px) {
