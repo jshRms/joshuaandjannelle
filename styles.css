@@ -173,7 +173,7 @@ iframe {
   width: 100%;
 }
 .attire {
-  padding: 70px 0px;
+  padding: 70px 0px 0px 0px;
   background-color: #fff;
   width: 100%;
 }
@@ -305,7 +305,7 @@ h2.reception {
   opacity: 1;
 }
 .sponsors {
-  padding: 70px 20px;
+  padding: 0px 20px 70px 20px;
   margin-bottom: 70px;
   background-color: #fff;
   width: 100%;
