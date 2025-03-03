@@ -129,3 +129,20 @@ function changeImage() {
 }
 
 setInterval(changeImage, 3000); // Change image every 3 seconds
+
+function toggleAccordion(header) {
+  let item = header.parentElement;
+  let isOpen = item.classList.contains("active");
+
+  // Close all accordions
+  document.querySelectorAll(".accordion-item").forEach((acc) => {
+    acc.classList.remove("active");
+    acc.querySelector(".accordion-header span").textContent = "+";
+  });
+
+  // Open the clicked one
+  if (!isOpen) {
+    item.classList.add("active");
+    header.querySelector("span").textContent = "-";
+  }
+}
