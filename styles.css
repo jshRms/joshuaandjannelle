@@ -394,7 +394,6 @@ h2.reception {
   gap: 20px;
 }
 @media screen and (min-width: 600px) {
-  section,
   .proposal > div,
   .attire > div {
     max-width: 420px;
