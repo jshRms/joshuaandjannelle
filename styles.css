@@ -442,7 +442,7 @@ h2.reception {
 }
 
 .accordion-item.active .accordion-content {
-  max-height: 150px; /* Adjust based on content */
+  max-height: 500px; /* Adjust based on content */
   opacity: 1;
   padding: 15px;
 }
