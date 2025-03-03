@@ -72,12 +72,14 @@ textarea {
   margin-top: 10px;
   cursor: pointer;
 }
-.e-invite {
+.e-invite,
+.dresscode {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.e-invite > a {
+.e-invite > a,
+.dresscode > a {
   text-align: center;
   text-decoration: none;
   color: #fff;
