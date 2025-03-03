@@ -393,6 +393,53 @@ h2.reception {
   flex-direction: column;
   gap: 20px;
 }
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.accordion-item {
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+  background-color: #cab9a7;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  background-color: white;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 150px; /* Adjust based on content */
+  opacity: 1;
+  padding: 15px;
+}
 @media screen and (min-width: 600px) {
   .proposal > div,
   .attire > div {
