@@ -468,9 +468,13 @@ h2.reception {
   .date,
   .place-time,
   .rsvp > div,
-  .about-us > div,
-  .attire > div {
+  .about-us > div
+   {
     max-width: 800px;
+    margin: 0 auto;
+  }
+  .attire > div {
+    max-width: 600px;
     margin: 0 auto;
   }
   .attire {
